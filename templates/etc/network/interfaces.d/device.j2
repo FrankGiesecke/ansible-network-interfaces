@@ -29,6 +29,16 @@ iface {{ item.device }} {{ item.family | default('inet', true) }} {{ item.method
 {%   endfor %}
 {% endif %}
 
+{%- if item.bond is defined -%}
+
+  # bond settings
+{%   for key in ['mode', 'miimon', 'master', 'slaves', 'lacp-rate', 'xmit-hash-policy'] %}
+{%     if key in item.bond -%}
+  bond_{{ key }} {{ item.bond[key] }}
+{%     endif %}
+{%   endfor %}
+{% endif %}
+
 {%- if item.subnets is defined %}
 
   # additional subnets
