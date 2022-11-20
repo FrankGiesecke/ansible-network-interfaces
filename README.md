@@ -54,6 +54,8 @@ None
 
 * `network_interfaces_interfaces.{n}.pre-up`: [optional, default: `[]`]: List of pre-up script lines
 * `network_interfaces_interfaces.{n}.up`: [optional, default: `[]`]: List of up script lines
+* `network_interfaces_interfaces.{n}.post-up`: [optional, default: `[]`]: List of post-up script lines
+* `network_interfaces_interfaces.{n}.pre-down`: [optional, default: `[]`]: List of pre-down script lines
 * `network_interfaces_interfaces.{n}.down`: [optional, default: `[]`]: List of down script lines
 * `network_interfaces_interfaces.{n}.post-down`: [optional, default: `[]`]: List of post-down script lines
 
