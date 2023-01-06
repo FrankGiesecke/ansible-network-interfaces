@@ -43,12 +43,12 @@ None
 ##### Bond
 
 * `network_interfaces_interfaces.{n}.bond`: [optional, default: `{}`]: Bond declarations
-* `network_interfaces_interfaces.{n}.bond.mode`: [optional]: Bonding mode. One of "active-backup", "balance-slb", or "balance-tcp".
-* `network_interfaces_interfaces.{n}.bond.miimon`: [optional]: Specifies the MII link monitoring frequency in milliseconds.
-* `network_interfaces_interfaces.{n}.bond.master`: [optional]: The name of the device that should act as bond master.
-* `network_interfaces_interfaces.{n}.bond.slaves`: [optional]: A list of devices to be used as bond slave.
-* `network_interfaces_interfaces.{n}.bond.lacp-rate`: [optional]: Option specifying the rate in of transmission of LACPDU packets in 802.3ad mode.
-* `network_interfaces_interfaces.{n}.bond.xmit-hash-policy`: [optional]: The transmit hash policy to use for slave selection in balance-xor and 802.3ad modes.
+* `network_interfaces_interfaces.{n}.bond.mode`: [optional]: Bonding mode. One of "active-backup", "balance-slb", or "balance-tcp"
+* `network_interfaces_interfaces.{n}.bond.miimon`: [optional]: Specifies the MII link monitoring frequency in milliseconds
+* `network_interfaces_interfaces.{n}.bond.master`: [optional]: The name of the device that should act as bond master
+* `network_interfaces_interfaces.{n}.bond.slaves`: [optional]: A list of devices to be used as bond slave
+* `network_interfaces_interfaces.{n}.bond.lacp-rate`: [optional]: Option specifying the rate in of transmission of LACPDU packets in 802.3ad mode
+* `network_interfaces_interfaces.{n}.bond.xmit-hash-policy`: [optional]: The transmit hash policy to use for slave selection in balance-xor and 802.3ad modes
 
 ##### Inline hook scripts
 
@@ -58,7 +58,6 @@ None
 * `network_interfaces_interfaces.{n}.pre-down`: [optional, default: `[]`]: List of pre-down script lines
 * `network_interfaces_interfaces.{n}.down`: [optional, default: `[]`]: List of down script lines
 * `network_interfaces_interfaces.{n}.post-down`: [optional, default: `[]`]: List of post-down script lines
-
 
 ## Dependencies
 

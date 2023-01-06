@@ -7,30 +7,30 @@
     - network-interfaces
   block:
 
-  - name: create directory
-    ansible.builtin.file:
-      path: "{{ network_interfaces_interface_path }}"
-      state: directory
-      mode: 0644
-    tags:
-      - network-interfaces-create-directory
+    - name: create directory
+      ansible.builtin.file:
+        path: "{{ network_interfaces_interface_path }}"
+        state: directory
+        mode: 0644
+      tags:
+        - network-interfaces-create-directory
 
-  - name: all interfaces
-    ansible.builtin.template:
-      src: etc/network/interfaces.j2
-      dest: "{{ network_interfaces_all_interfaces_path }}"
-      mode: 0644
-    notify: restart network-interfaces
-    tags:
-      - network-interfaces-all-interfaces
+    - name: all interfaces
+      ansible.builtin.template:
+        src: etc/network/interfaces.j2
+        dest: "{{ network_interfaces_all_interfaces_path }}"
+        mode: 0644
+      notify: restart network-interfaces
+      tags:
+        - network-interfaces-all-interfaces
 
-  - name: list network interfaces
-    ansible.builtin.command: >
-      find {{ network_interfaces_interface_path }} -type f
-    changed_when: false
-    register: _network_interfaces_existing_files
-    tags:
-      - network-interfaces-list-network-interfaces
+    - name: list network interfaces
+      ansible.builtin.command: >
+        find {{ network_interfaces_interface_path }} -type f
+      changed_when: false
+      register: _network_interfaces_existing_files
+      tags:
+        - network-interfaces-list-network-interfaces
 
 - name: configurations
   ansible.builtin.template:
