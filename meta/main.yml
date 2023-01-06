@@ -1,13 +1,12 @@
 # meta file
 ---
 galaxy_info:
-  namespace: oefenweb
+  author: oefenweb
   role_name: network_interfaces
-  author: Andreas Reischuck
-  company: Dresden Weekly
+  company: Oefenweb.nl B.V.
   description: Manage network interfaces in Debian-like systems
   license: MIT
-  min_ansible_version: 2.9.0
+  min_ansible_version: 2.10.0
   platforms:
     - name: Ubuntu
       versions:
